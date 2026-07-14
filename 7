@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Princess ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+/* CSS akan kita isi di Bagian 2 */
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Musik -->
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Kelopak bunga -->
+<div id="flowers"></div>
+
+<!-- Hati -->
+<div id="hearts"></div>
+
+<!-- Splash Screen -->
+<section id="welcome">
+
+<div class="glass">
+
+<h2>💌</h2>
+
+<h1>Untuk</h1>
+
+<h3>Princess nya akuu 😍🫶</h3>
+
+<p>
+Aku punya hadiah kecil untuk perempuan
+yang paling spesial di hidupku.
+</p>
+
+<button id="openBtn">
+Buka Hadiah ❤️
+</button>
+
+</div>
+
+</section>
+
+<!-- Halaman Utama -->
+<section id="mainPage" class="hide">
+
+<!-- Hero -->
+<div class="hero">
+
+<h1>Happy Birthday</h1>
+
+<h2>Princess nya akuu 🤍</h2>
+
+<p>15 Juli 2007</p>
+
+</div>
+
+<!-- Surat -->
+<div class="letter">
+
+<h2>💌 Surat Untukmu</h2>
+
+<div id="typingText"></div>
+
+</div>
+
+<!-- Gallery -->
+<div class="gallery">
+
+<h2>📷 Kenangan Kita</h2>
+
+<div class="slider">
+
+<img src="foto1.jpg">
+
+<img src="foto2.jpg">
+
+<img src="foto3.jpg">
+
+<img src="foto4.jpg">
+
+<img src="foto5.jpg">
+
+<img src="foto6.jpg">
+
+<img src="foto7.jpg">
+
+<img src="foto8.jpg">
+
+<img src="foto9.jpg">
+
+<img src="foto10.jpg">
+
+</div>
+
+</div>
+
+<!-- Countdown -->
+<div class="loveCounter">
+
+<h2>❤️ Kita Bersama</h2>
+
+<div id="counter"></div>
+
+</div>
+
+<!-- Cake -->
+<div class="cakeSection">
+
+<h2>🎂</h2>
+
+<div class="cake">
+
+🕯️🕯️🕯️
+
+🎂
+
+</div>
+
+<button id="blowBtn">
+
+Tiup Lilin 🎂
+
+</button>
+
+</div>
+
+<!-- Gift -->
+<div class="gift">
+
+🎁
+
+<button id="giftBtn">
+
+Buka Kado
+
+</button>
+
+</div>
+
+<!-- Pesan Akhir -->
+
+<div id="finalMessage" class="hide">
+
+<h1>
+
+Hadiah terbaikku...
+
+adalah kamu ❤️
+
+</h1>
+
+<button id="loveBtn">
+
+🤍 I Love You Forever 🤍
+
+</button>
+
+</div>
+
+</section>
+
+<script>
+
+/* JavaScript akan kita isi di Bagian 3 */
+
+</script>
+
+</body>
+</html>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#fff5f7,#ffe8ef,#fffaf6);
+overflow-x:hidden;
+color:#444;
+}
+
+/* Splash */
+
+#welcome{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+background:
+linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.35)),
+url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=80");
+background-size:cover;
+background-position:center;
+}
+
+.glass{
+
+width:100%;
+max-width:420px;
+
+background:rgba(255,255,255,.28);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.5);
+
+border-radius:28px;
+
+padding:35px;
+
+text-align:center;
+
+box-shadow:0 15px 45px rgba(0,0,0,.15);
+
+animation:fadeUp 1s;
+}
+
+.glass h1{
+
+font-family:"Dancing Script",cursive;
+
+font-size:52px;
+
+color:#e75480;
+
+margin:10px 0;
+}
+
+.glass h2{
+
+font-size:55px;
+}
+
+.glass h3{
+
+color:#ff5b8a;
+
+margin-bottom:15px;
+}
+
+.glass p{
+
+line-height:1.8;
+
+margin-bottom:25px;
+}
+
+button{
+
+padding:14px 28px;
+
+border:none;
+
+border-radius:999px;
+
+background:#ff5b8a;
+
+color:white;
+
+font-size:16px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.35s;
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 10px 25px rgba(255,91,138,.4);
+}
+
+.hide{
+
+display:none;
+}
+
+/* Hero */
+
+.hero{
+
+padding:90px 20px 60px;
+
+text-align:center;
+}
+
+.hero h1{
+
+font-family:"Dancing Script",cursive;
+
+font-size:68px;
+
+color:#ff4f88;
+}
+
+.hero h2{
+
+font-size:32px;
+
+margin:10px 0;
+}
+
+.hero p{
+
+color:#777;
+}
+
+/* Card */
+
+.letter,
+.gallery,
+.loveCounter,
+.cakeSection,
+.gift,
+#finalMessage{
+
+width:92%;
+
+max-width:900px;
+
+margin:30px auto;
+
+background:rgba(255,255,255,.65);
+
+backdrop-filter:blur(12px);
+
+border-radius:28px;
+
+padding:30px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.letter h2,
+.gallery h2,
+.loveCounter h2,
+.cakeSection h2{
+
+margin-bottom:20px;
+
+color:#ff4f88;
+}
+
+/* Gallery */
+
+.slider{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+
+gap:15px;
+}
+
+.slider img{
+
+width:100%;
+
+height:210px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+transition:.4s;
+
+cursor:pointer;
+}
+
+.slider img:hover{
+
+transform:scale(1.06);
+
+box-shadow:0 15px 25px rgba(0,0,0,.18);
+}
+
+/* Cake */
+
+.cake{
+
+font-size:60px;
+
+text-align:center;
+
+margin:20px;
+}
+
+.gift{
+
+text-align:center;
+}
+
+.gift{
+
+font-size:70px;
+}
+
+/* Final */
+
+#finalMessage{
+
+text-align:center;
+}
+
+#finalMessage h1{
+
+font-family:"Dancing Script",cursive;
+
+font-size:55px;
+
+color:#ff4f88;
+}
+
+/* Floating Hearts */
+
+#hearts,
+#flowers{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+}
+
+.heart,
+.flower{
+
+position:absolute;
+
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-100px) rotate(0deg);
+
+opacity:0;
+}
+
+10%{
+
+opacity:1;
+}
+
+100%{
+
+transform:translateY(110vh) rotate(360deg);
+
+opacity:0;
+}
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+}
+}
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:52px;
+}
+
+.hero h2{
+
+font-size:24px;
+}
+
+.glass h1{
+
+font-size:42px;
+}
+
+.slider img{
+
+height:170px;
+}
+
+#finalMessage h1{
+
+font-size:40px;
+}
+}
+
+const openBtn = document.getElementById("openBtn");
+const music = document.getElementById("music");
+const welcome = document.getElementById("welcome");
+const mainPage = document.getElementById("mainPage");
+const typingText = document.getElementById("typingText");
+
+const letter = `
+
+Selamat ulang tahun, Princess-ku. 🤍
+
+Hari ini dunia sedang merayakan lahirnya seseorang yang sangat berarti dalam hidupku.
+
+Terima kasih sudah hadir dan membuat hari-hariku jauh lebih berwarna.
+
+Semoga di umur yang baru ini Allah selalu menjaga setiap langkahmu, memberikan kesehatan, kebahagiaan, dan mengabulkan semua impianmu.
+
+Kalau suatu saat nanti hidup terasa berat, ingat ya... kamu tidak sendirian.
+
+Aku akan selalu ada untuk mendukungmu sebisaku.
+
+Terima kasih sudah menjadi rumah yang selalu ingin aku pulang.
+
+Aku sayang kamu hari ini, besok, lusa, dan selama Allah masih mengizinkan kita berjalan bersama.
+
+❤️ Pangeran
+`;
+
+openBtn.onclick = () => {
+
+welcome.style.display = "none";
+
+mainPage.classList.remove("hide");
+
+music.play().catch(()=>{});
+
+typingEffect();
+
+createHeart();
+
+createFlower();
+
+updateCounter();
+
+};
+
+let index = 0;
+
+function typingEffect(){
+
+if(index < letter.length){
+
+typingText.innerHTML += letter.charAt(index);
+
+index++;
+
+setTimeout(typingEffect,35);
+
+}
+
+}
+
+function createHeart(){
+
+setInterval(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=["💖","💕","💗","💓","❤️"][Math.floor(Math.random()*5)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*20)+"px";
+
+heart.style.animationDuration=(5+Math.random()*4)+"s";
+
+document.getElementById("hearts").appendChild(heart);
+
+setTimeout(()=>heart.remove(),9000);
+
+},250);
+
+}
+
+function createFlower(){
+
+setInterval(()=>{
+
+let flower=document.createElement("div");
+
+flower.className="flower";
+
+flower.innerHTML=["🌸","🌺","🌷","🌹"][Math.floor(Math.random()*4)];
+
+flower.style.left=Math.random()*100+"vw";
+
+flower.style.fontSize=(18+Math.random()*20)+"px";
+
+flower.style.animationDuration=(6+Math.random()*5)+"s";
+
+document.getElementById("flowers").appendChild(flower);
+
+setTimeout(()=>flower.remove(),10000);
+
+},400);
+
+}
+
+function updateCounter(){
+
+const start=new Date("2025-08-06");
+
+setInterval(()=>{
+
+const now=new Date();
+
+const diff=now-start;
+
+const days=Math.floor(diff/86400000);
+
+const months=Math.floor(days/30.44);
+
+const years=Math.floor(months/12);
+
+document.getElementById("counter").innerHTML=
+
+`❤️ ${days} Hari<br>
+❤️ ${months} Bulan<br>
+❤️ ${years} Tahun<br><br>
+Dan semoga... selamanya 🤍`;
+
+},1000);
+
+}
+
+document.getElementById("blowBtn").onclick=()=>{
+
+document.querySelector(".cake").innerHTML="🎂";
+
+alert("🎉 Yeayy!! Lilinnya berhasil ditiup.\nSemoga semua doa Princess dikabulkan ❤️");
+
+};
+
+document.getElementById("giftBtn").onclick=()=>{
+
+document.getElementById("finalMessage").classList.remove("hide");
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+};
+
+document.getElementById("loveBtn").onclick=()=>{
+
+for(let i=0;i<300;i++){
+
+setTimeout(()=>{
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+heart.style.animationDuration=(4+Math.random()*3)+"s";
+
+document.getElementById("hearts").appendChild(heart);
+
+setTimeout(()=>heart.remove(),8000);
+
+},i*20);
+
+}
+
+alert("🤍 I Love You Forever 🤍\n\nSemoga kita selalu bersama yaa ❤️");
+
+};
+
